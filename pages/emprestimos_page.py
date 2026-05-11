@@ -12,3 +12,7 @@ class EmprestimosPage:
     def clicar_contratar_emprestimo(self):
         self.page.on("dialog", lambda dialog: dialog.accept())
         self.contratar_emprestimo_button.click()
+
+    def contratar_emprestimo(self, valor):
+        self.selecionar_valor_emprestimo(valor)
+        self.clicar_contratar_emprestimo()
