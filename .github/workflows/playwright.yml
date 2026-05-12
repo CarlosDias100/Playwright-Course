@@ -24,7 +24,7 @@ jobs:
     - name: Ensure browsers are installed
       run: python -m playwright install --with-deps
     - name: Run your tests
-      run: pytest --cache-clear --tracing retain-on-failure
+      run: pytest --cache-clear 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
